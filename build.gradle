@@ -5,7 +5,6 @@ plugins {
 }
 
 group = 'dev.turbin'
-version = '0.0.1-SNAPSHOT'
 
 java {
     toolchain {
@@ -33,4 +32,8 @@ dependencies {
 
 tasks.named('test') {
     useJUnitPlatform()
+}
+
+tasks.named('jar') {
+    enabled = false
 }
