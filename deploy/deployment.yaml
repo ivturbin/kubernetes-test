@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: kubernetes-test-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: kubernetes-test
+  template:
+    metadata:
+      labels:
+        app: kubernetes-test
+    spec:
+      containers:
+        - name: kubernetes-test
+          image: kubernetes-test:latest
+          ports:
+            - containerPort: 8080
