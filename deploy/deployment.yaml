@@ -14,6 +14,7 @@ spec:
     spec:
       containers:
         - name: kubernetes-test
-          image: kubernetes-test:latest
+          image: kubernetes-test-image:latest
+          imagePullPolicy: Never #ensures that only pre-approved, locally available images are used
           ports:
             - containerPort: 8080
